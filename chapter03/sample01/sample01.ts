@@ -1,3 +1,3 @@
-let message = 'TypeScriptを学習しています';
+let message = 'ECMAScriptを学習しています';
 
 console.log(message);

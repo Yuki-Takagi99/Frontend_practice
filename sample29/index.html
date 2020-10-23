@@ -13,11 +13,15 @@
         <h1 class="frame__title">JavaScript</h1>
 
         <div class="frame__inner">
-            <div id="timer"></div>
-            <script src="timer.js">
+            <p id="answer"></p>
+            <script type="module">
+                import { sum } from './math.js';
+
+                let answer = sum(10, 2);
+                document.getElementById('answer').innerHTML = answer;
             </script>
         </div>
     </div>
 </body>
 
-</html>1
+</html>

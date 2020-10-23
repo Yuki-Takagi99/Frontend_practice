@@ -2,7 +2,7 @@ class Item {
     public tax: number;
     private price: number;
 
-    constructor(price: number, tax?: number=10) {
+    constructor(price: number, tax: number=10) {
         if (tax === undefined) {
             this.tax = 10;
         } else {

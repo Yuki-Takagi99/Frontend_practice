@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>サンプルコード</title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <div>
+                <label>
+                    <input type="checkbox" name="agree" id="agree">
+                    同意する
+                </label>
+                <div>
+                    <button id="submit" disabled>送信する</button>
+                </div>
+            </div>
+            <script>
+                const agree = document.getElementById('agree');
+                agree.addEventListener('change', () => {
+                    // if (agree.checked === true) {
+                    //     document.getElementById('submit').disabled = false;
+                    // } else {
+                    //     document.getElementById('submit').disabled = true;
+                    // }
+
+                    // 以下のようにも書ける
+                    document.getElementById('submit').disabled = !agree.checked;
+                })
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../../assets/style.css">
+    <style>
+        .v-enter-active {
+            transition: opacity 3s;
+        }
+        .v-enter {
+            opacity: 0;
+        }
+        .v-enter-to {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <div id="app">
+                <transition appear>
+                    <div v-html="message"></div>
+                </transition>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                message: "Vue.jsの勉強をしています。"
+            }
+        });
+    </script>
+</body>
+</html>
